@@ -36,27 +36,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             consuptionFuelSliderOutlet.value = 0
         }
     }
-    
-    @IBAction func kmOrMileSwitch(_ sender: UISwitch) {
-        if sender.isOn {
-            kmLabel.textColor = .gray
-            orLabel.textColor = .gray
-            mileLabel.textColor = .white
-        } else {
-            kmLabel.textColor = .white
-            orLabel.textColor = .gray
-            mileLabel.textColor = .gray
-        }
-    }
-    
-    @IBAction func mileageTripTFAction(_ sender: UITextField) {
-    }
-    
-    @IBAction func costFuelTFAction(_ sender: UITextField) {
-    }
-    
-    @IBAction func consuptionFuelSlider(_ sender: UISlider) {
-        let consuptionFuel = Double(sender.value)
+    func calculate() {
+        let consuptionFuel = Double(consuptionFuelSliderOutlet.value)
         let stringFuel = String(format: "%.1f", consuptionFuel)
         
         consuptionFuelLabel.text! = "Расход топлива - \(stringFuel) литров"
@@ -69,8 +50,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let tripCost = (costFuel * consuptionFuelValueForTripCost * mileageTrip)
         let tripCostString = String(format: "%.2f", tripCost)
-        
+        let coef = kmOrMileSwitchLabel.isOn ? 1.61:1
+        let multy = tripCost * Double(coef)
+        let multyString = String(format: "%.2f", multy)
+        if kmOrMileSwitchLabel.isOn {
+            tripCostLabel.text! = "Стоимость поездки равна - \(multyString) рубля"
+        } else {
         tripCostLabel.text! = "Стоимость поездки равна - \(tripCostString) рубля"
+    }
+    }
+    
+    @IBAction func kmOrMileSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            kmLabel.textColor = .gray
+            orLabel.textColor = .gray
+            mileLabel.textColor = .white
+        } else {
+            kmLabel.textColor = .white
+            orLabel.textColor = .gray
+            mileLabel.textColor = .gray
+        }
+        calculate()
+    }
+    
+    
+    @IBAction func mileageTripTFAction(_ sender: UITextField) {
+        calculate()
+    }
+    
+    @IBAction func costFuelTFAction(_ sender: UITextField) {
+        calculate()
+    }
+    
+    @IBAction func consuptionFuelSlider(_ sender: UISlider) {
+        calculate()
         
     }
     
