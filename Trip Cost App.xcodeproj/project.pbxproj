@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33B59388286DA9F700F0FCE6 /* Trop Cost App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trop Cost App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B59388286DA9F700F0FCE6 /* Trip Cost App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Cost App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B5938B286DA9F700F0FCE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33B5938D286DA9F700F0FCE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		33B5938F286DA9F700F0FCE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		33B5937F286DA9F700F0FCE6 = {
 			isa = PBXGroup;
 			children = (
-				33B5938A286DA9F700F0FCE6 /* Trop Cost App */,
+				33B5938A286DA9F700F0FCE6 /* Trip Cost App */,
 				33B59389286DA9F700F0FCE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		33B59389286DA9F700F0FCE6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33B59388286DA9F700F0FCE6 /* Trop Cost App.app */,
+				33B59388286DA9F700F0FCE6 /* Trip Cost App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		33B5938A286DA9F700F0FCE6 /* Trop Cost App */ = {
+		33B5938A286DA9F700F0FCE6 /* Trip Cost App */ = {
 			isa = PBXGroup;
 			children = (
 				33B5938B286DA9F700F0FCE6 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				33B59396286DA9FC00F0FCE6 /* LaunchScreen.storyboard */,
 				33B59399286DA9FC00F0FCE6 /* Info.plist */,
 			);
-			path = "Trop Cost App";
+			path = "Trip Cost App";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33B59387286DA9F700F0FCE6 /* Trop Cost App */ = {
+		33B59387286DA9F700F0FCE6 /* Trip Cost App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33B5939C286DA9FC00F0FCE6 /* Build configuration list for PBXNativeTarget "Trop Cost App" */;
+			buildConfigurationList = 33B5939C286DA9FC00F0FCE6 /* Build configuration list for PBXNativeTarget "Trip Cost App" */;
 			buildPhases = (
 				33B59384286DA9F700F0FCE6 /* Sources */,
 				33B59385286DA9F700F0FCE6 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Trop Cost App";
+			name = "Trip Cost App";
 			productName = "Trop Cost App";
-			productReference = 33B59388286DA9F700F0FCE6 /* Trop Cost App.app */;
+			productReference = 33B59388286DA9F700F0FCE6 /* Trip Cost App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33B59383286DA9F700F0FCE6 /* Build configuration list for PBXProject "Trop Cost App" */;
+			buildConfigurationList = 33B59383286DA9F700F0FCE6 /* Build configuration list for PBXProject "Trip Cost App" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33B59387286DA9F700F0FCE6 /* Trop Cost App */,
+				33B59387286DA9F700F0FCE6 /* Trip Cost App */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JK7VYC93Q8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Trop Cost App/Info.plist";
+				INFOPLIST_FILE = "Trip Cost App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Trip Cost App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +318,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JK7VYC93Q8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Trop Cost App/Info.plist";
+				INFOPLIST_FILE = "Trip Cost App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Trip Cost App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33B59383286DA9F700F0FCE6 /* Build configuration list for PBXProject "Trop Cost App" */ = {
+		33B59383286DA9F700F0FCE6 /* Build configuration list for PBXProject "Trip Cost App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33B5939A286DA9FC00F0FCE6 /* Debug */,
@@ -348,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33B5939C286DA9FC00F0FCE6 /* Build configuration list for PBXNativeTarget "Trop Cost App" */ = {
+		33B5939C286DA9FC00F0FCE6 /* Build configuration list for PBXNativeTarget "Trip Cost App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33B5939D286DA9FC00F0FCE6 /* Debug */,
