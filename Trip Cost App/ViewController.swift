@@ -13,6 +13,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mileageTripLabel: UILabel!
     @IBOutlet weak var costFuelLabel: UILabel!
     @IBOutlet weak var tripCostLabel: UILabel!
+    @IBOutlet weak var kmOrMileSwitchLabel: UISwitch!
+    @IBOutlet weak var kmLabel: UILabel!
+    @IBOutlet weak var orLabel: UILabel! {
+        didSet {
+            orLabel.text = "/"
+            orLabel.textColor = .gray
+        }
+    }
+    @IBOutlet weak var mileLabel: UILabel! {
+        didSet {
+            mileLabel.text = "mile"
+            mileLabel.textColor = .gray
+        }
+    }
     @IBOutlet weak var mileageTripTF: UITextField!
     @IBOutlet weak var costFuelTF: UITextField!
     @IBOutlet weak var consuptionFuelSliderOutlet: UISlider! {
@@ -20,6 +34,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
             consuptionFuelSliderOutlet.maximumValue = 20
             consuptionFuelSliderOutlet.minimumValue = 0
             consuptionFuelSliderOutlet.value = 0
+        }
+    }
+    
+    @IBAction func kmOrMileSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            kmLabel.textColor = .gray
+            orLabel.textColor = .gray
+            mileLabel.textColor = .white
+        } else {
+            kmLabel.textColor = .white
+            orLabel.textColor = .gray
+            mileLabel.textColor = .gray
         }
     }
     
@@ -51,9 +77,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-}
-func logikApp () {
-    
 }
 
 
