@@ -43,8 +43,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         consuptionFuelLabel.text! = "Расход топлива - \(stringFuel) литров"
         
         guard let consuptionFuelValueForTripCost = Double(String(format: "%.1f", consuptionFuel)) else { return }
-        guard let costFuel = Double(costFuelTF.text!) else { return }
-        guard var mileageTrip = Double(mileageTripTF.text!) else { return }
+        guard let costFuel = Double(costFuelTF.text!) else {
+            return tripCostLabel.text = "Введите стоимость топлива" }
+        guard var mileageTrip = Double(mileageTripTF.text!) else {
+            return tripCostLabel.text = "Введите пробег поездки" }
+        
         
         mileageTrip /= 100
         
@@ -53,11 +56,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let coef = kmOrMileSwitchLabel.isOn ? 1.61:1
         let multy = tripCost * Double(coef)
         let multyString = String(format: "%.2f", multy)
+        
+        
         if kmOrMileSwitchLabel.isOn {
             tripCostLabel.text! = "Стоимость поездки равна - \(multyString) рубля"
         } else {
-        tripCostLabel.text! = "Стоимость поездки равна - \(tripCostString) рубля"
-    }
+            tripCostLabel.text! = "Стоимость поездки равна - \(tripCostString) рубля"
+            
+            tripCostLabel.adjustsFontSizeToFitWidth = true
+            tripCostLabel.minimumScaleFactor = 0.5
+        }
+        if mileageTripLabel.text != nil && costFuelLabel.text != nil && consuptionFuelSliderOutlet.value < 0.1 {
+            tripCostLabel.text = "Укажите расход топлива"
+        }
     }
     
     @IBAction func kmOrMileSwitch(_ sender: UISwitch) {
@@ -73,8 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         calculate()
     }
     
-    
-    @IBAction func mileageTripTFAction(_ sender: UITextField) {
+    @IBAction func calculatemileageTripTFAction(_ sender: UITextField) {
         calculate()
     }
     
@@ -84,7 +94,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func consuptionFuelSlider(_ sender: UISlider) {
         calculate()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
