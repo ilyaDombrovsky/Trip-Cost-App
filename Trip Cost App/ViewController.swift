@@ -7,8 +7,17 @@
 
 import UIKit
 
+
+
+
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    
+    
+    
+    
+    
+    @IBOutlet var viewControllerOutlet: UIView!
     @IBOutlet weak var consuptionFuelLabel: UILabel!
     @IBOutlet weak var mileageTripLabel: UILabel!
     @IBOutlet weak var costFuelLabel: UILabel!
@@ -57,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let multy = tripCost * Double(coef)
         let multyString = String(format: "%.2f", multy)
         
-        
+       
         if kmOrMileSwitchLabel.isOn {
             tripCostLabel.text! = "Стоимость поездки равна - \(multyString) рубля"
         } else {
@@ -70,6 +79,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             tripCostLabel.text = "Укажите расход топлива"
         }
     }
+
+    
     
     @IBAction func kmOrMileSwitch(_ sender: UISwitch) {
         if sender.isOn {
@@ -83,7 +94,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         calculate()
     }
-    
+   
     @IBAction func calculatemileageTripTFAction(_ sender: UITextField) {
         calculate()
     }
@@ -99,7 +110,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-}
+    
+  
+
+  
+   
+    }
 
 
 
